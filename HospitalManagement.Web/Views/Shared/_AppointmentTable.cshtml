@@ -1,0 +1,5 @@
+@model IEnumerable<Appointment>
+@if(!Model.Any()){<div class="empty">Chưa có lịch hẹn phù hợp.</div>}else{
+<div class="table-responsive"><table class="table"><thead><tr><th>Mã / STT</th><th>Bệnh nhân</th><th>Bác sĩ</th><th>Ngày giờ</th><th>Trạng thái</th><th></th></tr></thead><tbody>
+@foreach(var a in Model){<tr><td><strong>@a.Reference</strong><br/><small>Số @a.SerialNo</small></td><td>@a.PatientName<br/><span class="small-muted">@a.PatientPhone</span></td><td>@a.Doctor.User.FullName</td><td>@a.AppointmentDate.ToString("dd/MM/yyyy")<br/>@a.AppointmentTime.ToString("HH:mm")</td><td><span class="status @a.Status">@Display.Status(a.Status)</span></td><td><a asp-area="" asp-controller="Appointment" asp-action="Details" asp-route-id="@a.Id" class="btn btn-light btn-sm">Chi tiết</a></td></tr>}
+</tbody></table></div>}

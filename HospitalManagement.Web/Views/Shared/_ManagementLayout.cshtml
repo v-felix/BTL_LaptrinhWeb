@@ -1,0 +1,31 @@
+@{ Layout = "_Layout"; }
+<div class="workspace container-fluid">
+<aside class="sidebar no-print"><div class="sidebar-label">KHÔNG GIAN LÀM VIỆC</div><div class="user-label">@User.Identity?.Name</div>
+@if (User.IsInRole(Roles.Admin)) {
+<a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">▦ Tổng quan</a>
+<a asp-area="Admin" asp-controller="User" asp-action="Index">Tài khoản & phân quyền</a>
+<a asp-area="Admin" asp-controller="User" asp-action="Index" asp-route-role="Doctor">Đội ngũ bác sĩ</a>
+<a asp-area="Admin" asp-controller="User" asp-action="Index" asp-route-role="Staff">Nhân viên</a>
+<a asp-area="Admin" asp-controller="Schedule" asp-action="Index">Lịch làm việc</a>
+<a asp-area="Admin" asp-controller="Service" asp-action="Index">Dịch vụ xét nghiệm</a>
+<a asp-area="Admin" asp-controller="HealthCheck" asp-action="Index">Danh mục gói khám</a>
+<a asp-area="Admin" asp-controller="News" asp-action="Index">Quản lý tin tức</a>
+}
+@if (User.IsInRole(Roles.Admin) || User.IsInRole(Roles.Staff)) {
+<a asp-area="Admin" asp-controller="Appointment" asp-action="Index">Lịch hẹn khám</a>
+<a asp-area="Admin" asp-controller="PackageBooking" asp-action="Index">Phiếu gói khám & thu phí</a>
+}
+@if (User.IsInRole(Roles.Doctor)) {
+<a asp-area="Doctor" asp-controller="Appointment" asp-action="Index">Lịch khám của tôi</a>
+<a asp-area="Doctor" asp-controller="Schedule" asp-action="Index">Ca làm việc</a>
+<a asp-area="Doctor" asp-controller="Message" asp-action="Index">Thông báo nội bộ</a>
+}
+@if (User.IsInRole(Roles.Admin) || User.IsInRole(Roles.Diagnostic)) {
+<a asp-area="Diagnostic" asp-controller="Booking" asp-action="Index">Tiếp nhận & trả kết quả</a>
+@if (User.IsInRole(Roles.Diagnostic)) { <a asp-area="Admin" asp-controller="Service" asp-action="Index">Danh mục xét nghiệm</a> }
+}
+<hr/><a asp-area="" asp-controller="Patient" asp-action="Index">Hồ sơ khám cá nhân</a>
+<a asp-area="" asp-controller="Account" asp-action="Profile">Thông tin tài khoản</a>
+<a asp-area="" asp-controller="Home" asp-action="Index">← Về trang chủ</a>
+</aside><section class="work-content"><div class="page-heading"><div><p class="eyebrow">XET HOSPITAL / QUẢN LÝ</p><h1>@ViewData["Title"]</h1></div><span class="text-muted">@HospitalClock.Today.ToString("dd/MM/yyyy")</span></div>@RenderBody()</section></div>
+@section Scripts { @await RenderSectionAsync("Scripts", required: false) }

@@ -1,0 +1,3 @@
+@model List<DoctorMessage>
+@{ViewData["Title"]="Thông báo nội bộ";}
+@foreach(var m in Model){<div class="form-panel mb-3"><p class="small-muted">@m.Admin.FullName · @m.CreatedAt.AddHours(7).ToString("dd/MM/yyyy HH:mm") · @(m.IsRead?"Đã đọc":"Chưa đọc")</p><p class="prose">@m.Message</p>@if(!m.IsRead){<form asp-action="Read" asp-route-id="@m.Id" method="post"><button class="btn btn-outline-primary btn-sm">Đánh dấu đã đọc</button></form>}</div>}@if(!Model.Any()){<p class="empty">Chưa có thông báo.</p>}

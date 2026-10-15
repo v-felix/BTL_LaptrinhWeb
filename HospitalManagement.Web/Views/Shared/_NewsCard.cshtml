@@ -1,0 +1,2 @@
+@model News
+<div class="card h-100"><div class="news-art"></div><div class="card-body"><p class="news-category">@Model.Category · @Model.PublishedDate.ToString("dd/MM/yyyy")</p><h3 class="card-title"><a asp-area="" asp-controller="Home" asp-action="Article" asp-route-id="@Model.Id">@Model.Title</a></h3><p class="card-text">@Model.Excerpt</p><a asp-area="" asp-controller="Home" asp-action="Article" asp-route-id="@Model.Id">Đọc bài viết →</a></div></div>

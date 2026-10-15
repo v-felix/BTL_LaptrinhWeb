@@ -1,0 +1,1412 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@example.com",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Xihad Ansari",
+      "email": "xihad.ansari@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Mahmud Hasan",
+      "email": "doctor@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 4,
+      "name": "Dr. Farzana Akter",
+      "email": "farzana.akter@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 5,
+      "name": "Dr. Shanto Roy",
+      "email": "shanto.roy@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 6,
+      "name": "Dr. Nabila Islam",
+      "email": "nabila.islam@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 7,
+      "name": "Dr. Tareq Amin",
+      "email": "tareq.amin@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 8,
+      "name": "Dr. Nusrat Jahan",
+      "email": "nusrat.jahan@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 9,
+      "name": "Dr. Imran Kabir",
+      "email": "imran.kabir@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 10,
+      "name": "Dr. Sanjida Rahman",
+      "email": "sanjida.rahman@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 11,
+      "name": "Dr. Rakibul Islam",
+      "email": "rakibul.islam@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 12,
+      "name": "Dr. Shirin Akhter",
+      "email": "shirin.akhter@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 13,
+      "name": "Dr. Arif Chowdhury",
+      "email": "arif.chowdhury@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 14,
+      "name": "Dr. Tahmina Sultana",
+      "email": "tahmina.sultana@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 15,
+      "name": "Dr. Jubayer Ahmed",
+      "email": "jubayer.ahmed@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 16,
+      "name": "Dr. Rukhsana Parvin",
+      "email": "rukhsana.parvin@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 17,
+      "name": "Dr. Morshed Alam",
+      "email": "morshed.alam@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 18,
+      "name": "Dr. Sumaiya Khan",
+      "email": "sumaiya.khan@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 19,
+      "name": "Dr. Nafis Rahim",
+      "email": "nafis.rahim@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 20,
+      "name": "Dr. Tasnim Noor",
+      "email": "tasnim.noor@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 21,
+      "name": "Dr. Reaz Ahmed",
+      "email": "reaz.ahmed@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 22,
+      "name": "Dr. Lamia Hossain",
+      "email": "lamia.hossain@example.com",
+      "role": "doctor"
+    },
+    {
+      "id": 23,
+      "name": "Mst Jakia Sultana",
+      "email": "jakia.sultana@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 24,
+      "name": " Rahim Chowdhury",
+      "email": "rahim.chowdhury@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 25,
+      "name": " Guard Jamal Hossain",
+      "email": "jamal.hossain@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 26,
+      "name": " Fatima Begum",
+      "email": "fatima.begum@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 27,
+      "name": " Karim Reza",
+      "email": "karim.reza@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 28,
+      "name": " Sumona Akter",
+      "email": "sumona.akter@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 29,
+      "name": " Guard Anwar Ali",
+      "email": "anwar.ali@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 30,
+      "name": " Mohammad Islam",
+      "email": "mohammad.islam@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 31,
+      "name": " Parveen Sultana",
+      "email": "parveen.sultana@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 32,
+      "name": " Imran Khan",
+      "email": "imran.khan@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 33,
+      "name": " Guard Rina Das",
+      "email": "rina.das@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 34,
+      "name": " Asma Khatun",
+      "email": "asma.khatun@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 35,
+      "name": " Shahidul Islam",
+      "email": "shahidul.islam@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 36,
+      "name": " Nadia Rahman",
+      "email": "nadia.rahman@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 37,
+      "name": " Guard Babu Mia",
+      "email": "babu.mia@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 38,
+      "name": " Rokeya Begum",
+      "email": "rokeya.begum@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 39,
+      "name": " Tanvir Ahmed",
+      "email": "tanvir.ahmed@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 40,
+      "name": " Farhana Islam",
+      "email": "farhana.islam@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 41,
+      "name": " Guard Kamal Hossain",
+      "email": "kamal.hossain@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 42,
+      "name": " Laila Noor",
+      "email": "laila.noor@example.com",
+      "role": "staff"
+    },
+    {
+      "id": 43,
+      "name": "Dr. Ayesha Rahman",
+      "email": "diagnostic@example.com",
+      "role": "diagnostic"
+    },
+    {
+      "id": 44,
+      "name": "Dr. Karim Ullah",
+      "email": "karim.ullah@example.com",
+      "role": "diagnostic"
+    },
+    {
+      "id": 45,
+      "name": "Dr. Nadia Chowdhury",
+      "email": "nadia.chowdhury@example.com",
+      "role": "diagnostic"
+    },
+    {
+      "id": 46,
+      "name": "Dr. Rafiq Ahmed",
+      "email": "rafiq.ahmed@example.com",
+      "role": "diagnostic"
+    },
+    {
+      "id": 47,
+      "name": "Dr. Sumaiya Hossain",
+      "email": "sumaiya.hossain@example.com",
+      "role": "diagnostic"
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "designation": "MBBS, FCPS (Medicine)",
+      "speciality": "General Physician",
+      "phone": "01711000001",
+      "about": "Mental health & counseling.",
+      "created_at": "2026-10-15 18:52:33",
+      "updated_at": "2026-10-15 18:52:33"
+    },
+    {
+      "id": 2,
+      "user_id": 3,
+      "designation": "MBBS, MD (Cardiology)",
+      "speciality": "Cardiology",
+      "phone": "01711000002",
+      "about": "Heart care and cardiac consultation.",
+      "created_at": "2026-10-15 18:52:34",
+      "updated_at": "2026-10-15 18:52:34"
+    },
+    {
+      "id": 3,
+      "user_id": 4,
+      "designation": "MBBS, MD (Neurology)",
+      "speciality": "Neurology",
+      "phone": "01711000003",
+      "about": "Neurological disorders & headache clinic.",
+      "created_at": "2026-10-15 18:52:34",
+      "updated_at": "2026-10-15 18:52:34"
+    },
+    {
+      "id": 4,
+      "user_id": 5,
+      "designation": "MBBS, MS (Orthopedics)",
+      "speciality": "Orthopedics",
+      "phone": "01711000004",
+      "about": "Bone, joint & sports injury specialist.",
+      "created_at": "2026-10-15 18:52:34",
+      "updated_at": "2026-10-15 18:52:34"
+    },
+    {
+      "id": 5,
+      "user_id": 6,
+      "designation": "MBBS, DDV (Dermatology)",
+      "speciality": "Dermatology",
+      "phone": "01711000005",
+      "about": "Skin, hair & nail care.",
+      "created_at": "2026-10-15 18:52:35",
+      "updated_at": "2026-10-15 18:52:35"
+    },
+    {
+      "id": 6,
+      "user_id": 7,
+      "designation": "MBBS, DCH, MD (Pediatrics)",
+      "speciality": "Pediatrics",
+      "phone": "01711000006",
+      "about": "Child health & vaccination.",
+      "created_at": "2026-10-15 18:52:35",
+      "updated_at": "2026-10-15 18:52:35"
+    },
+    {
+      "id": 7,
+      "user_id": 8,
+      "designation": "MBBS, FCPS (Gynae & Obs)",
+      "speciality": "Gynecology & Obstetrics",
+      "phone": "01711000007",
+      "about": "Women’s health & maternity care.",
+      "created_at": "2026-10-15 18:52:36",
+      "updated_at": "2026-10-15 18:52:36"
+    },
+    {
+      "id": 8,
+      "user_id": 9,
+      "designation": "MBBS, DLO (ENT)",
+      "speciality": "ENT",
+      "phone": "01711000008",
+      "about": "Ear, nose & throat diseases.",
+      "created_at": "2026-10-15 18:52:36",
+      "updated_at": "2026-10-15 18:52:36"
+    },
+    {
+      "id": 9,
+      "user_id": 10,
+      "designation": "MBBS, DO (Ophthalmology)",
+      "speciality": "Ophthalmology",
+      "phone": "01711000009",
+      "about": "Eye specialist & cataract clinic.",
+      "created_at": "2026-10-15 18:52:37",
+      "updated_at": "2026-10-15 18:52:37"
+    },
+    {
+      "id": 10,
+      "user_id": 11,
+      "designation": "MBBS, MD (Gastroenterology)",
+      "speciality": "Gastroenterology",
+      "phone": "01711000010",
+      "about": "Liver & digestive diseases.",
+      "created_at": "2026-10-15 18:52:37",
+      "updated_at": "2026-10-15 18:52:37"
+    },
+    {
+      "id": 11,
+      "user_id": 12,
+      "designation": "MBBS, MD (Nephrology)",
+      "speciality": "Nephrology",
+      "phone": "01711000011",
+      "about": "Kidney diseases & dialysis advice.",
+      "created_at": "2026-10-15 18:52:38",
+      "updated_at": "2026-10-15 18:52:38"
+    },
+    {
+      "id": 12,
+      "user_id": 13,
+      "designation": "MBBS, MS (Urology)",
+      "speciality": "Urology",
+      "phone": "01711000012",
+      "about": "Urinary & male reproductive health.",
+      "created_at": "2026-10-15 18:52:39",
+      "updated_at": "2026-10-15 18:52:39"
+    },
+    {
+      "id": 13,
+      "user_id": 14,
+      "designation": "MBBS, MD (Endocrinology)",
+      "speciality": "Endocrinology",
+      "phone": "01711000013",
+      "about": "Diabetes & hormone disorders.",
+      "created_at": "2026-10-15 18:52:39",
+      "updated_at": "2026-10-15 18:52:39"
+    },
+    {
+      "id": 14,
+      "user_id": 15,
+      "designation": "MBBS, MD (Oncology)",
+      "speciality": "Oncology",
+      "phone": "01711000014",
+      "about": "Cancer diagnosis & chemotherapy advice.",
+      "created_at": "2026-10-15 18:52:40",
+      "updated_at": "2026-10-15 18:52:40"
+    },
+    {
+      "id": 15,
+      "user_id": 16,
+      "designation": "MBBS, MD (Psychiatry)",
+      "speciality": "Psychiatry",
+      "phone": "01711000015",
+      "about": "Mental health & counseling.",
+      "created_at": "2026-10-15 18:52:40",
+      "updated_at": "2026-10-15 18:52:40"
+    },
+    {
+      "id": 16,
+      "user_id": 17,
+      "designation": "MBBS, MD (Pulmonology)",
+      "speciality": "Pulmonology",
+      "phone": "01711000016",
+      "about": "Asthma, COPD & lung care.",
+      "created_at": "2026-10-15 18:52:41",
+      "updated_at": "2026-10-15 18:52:41"
+    },
+    {
+      "id": 17,
+      "user_id": 18,
+      "designation": "MBBS, MD (Rheumatology)",
+      "speciality": "Rheumatology",
+      "phone": "01711000017",
+      "about": "Arthritis & autoimmune diseases.",
+      "created_at": "2026-10-15 18:52:41",
+      "updated_at": "2026-10-15 18:52:41"
+    },
+    {
+      "id": 18,
+      "user_id": 19,
+      "designation": "MBBS, MD (Hematology)",
+      "speciality": "Hematology",
+      "phone": "01711000018",
+      "about": "Blood disorders & anemia clinic.",
+      "created_at": "2026-10-15 18:52:42",
+      "updated_at": "2026-10-15 18:52:42"
+    },
+    {
+      "id": 19,
+      "user_id": 20,
+      "designation": "BDS, FCPS (Oral & Maxillofacial Surgery)",
+      "speciality": "Dental Surgery",
+      "phone": "01711000019",
+      "about": "Oral surgery & dental implants.",
+      "created_at": "2026-10-15 18:52:42",
+      "updated_at": "2026-10-15 18:52:42"
+    },
+    {
+      "id": 20,
+      "user_id": 21,
+      "designation": "MBBS, MD (Anesthesiology)",
+      "speciality": "Anesthesiology",
+      "phone": "01711000020",
+      "about": "Perioperative & pain management.",
+      "created_at": "2026-10-15 18:52:43",
+      "updated_at": "2026-10-15 18:52:43"
+    },
+    {
+      "id": 21,
+      "user_id": 22,
+      "designation": "MBBS, MD (PM&R)",
+      "speciality": "Physical Medicine & Rehabilitation",
+      "phone": "01711000021",
+      "about": "Rehab, physio & pain clinic.",
+      "created_at": "2026-10-15 18:52:43",
+      "updated_at": "2026-10-15 18:52:43"
+    }
+  ],
+  "staff": [
+    {
+      "id": 1,
+      "user_id": 23,
+      "designation": "Registered Nurse",
+      "department": "Nursing",
+      "phone": "01811000001",
+      "about": "Experienced in patient care and emergency response.",
+      "created_at": "2026-10-15 18:52:44",
+      "updated_at": "2026-10-15 18:52:44"
+    },
+    {
+      "id": 2,
+      "user_id": 24,
+      "designation": "Senior Accountant",
+      "department": "Finance",
+      "phone": "01811000002",
+      "about": "Handles hospital budgeting and financial reporting.",
+      "created_at": "2026-10-15 18:52:44",
+      "updated_at": "2026-10-15 18:52:44"
+    },
+    {
+      "id": 3,
+      "user_id": 25,
+      "designation": "Security Officer",
+      "department": "Security",
+      "phone": "01811000003",
+      "about": "Ensures safety and security of premises.",
+      "created_at": "2026-10-15 18:52:45",
+      "updated_at": "2026-10-15 18:52:45"
+    },
+    {
+      "id": 4,
+      "user_id": 26,
+      "designation": "Housekeeper",
+      "department": "Housekeeping",
+      "phone": "01811000004",
+      "about": "Maintains cleanliness and hygiene in wards.",
+      "created_at": "2026-10-15 18:52:45",
+      "updated_at": "2026-10-15 18:52:45"
+    },
+    {
+      "id": 5,
+      "user_id": 27,
+      "designation": "Nurse Assistant",
+      "department": "Nursing",
+      "phone": "01811000005",
+      "about": "Assists in patient monitoring and care.",
+      "created_at": "2026-10-15 18:52:46",
+      "updated_at": "2026-10-15 18:52:46"
+    },
+    {
+      "id": 6,
+      "user_id": 28,
+      "designation": "Junior Accountant",
+      "department": "Finance",
+      "phone": "01811000006",
+      "about": "Manages petty cash and invoices.",
+      "created_at": "2026-10-15 18:52:46",
+      "updated_at": "2026-10-15 18:52:46"
+    },
+    {
+      "id": 7,
+      "user_id": 29,
+      "designation": "Night Shift Security",
+      "department": "Security",
+      "phone": "01811000007",
+      "about": "Oversees security during night hours.",
+      "created_at": "2026-10-15 18:52:47",
+      "updated_at": "2026-10-15 18:52:47"
+    },
+    {
+      "id": 8,
+      "user_id": 30,
+      "designation": "Janitor",
+      "department": "Housekeeping",
+      "phone": "01811000008",
+      "about": "Handles waste disposal and floor cleaning.",
+      "created_at": "2026-10-15 18:52:47",
+      "updated_at": "2026-10-15 18:52:47"
+    },
+    {
+      "id": 9,
+      "user_id": 31,
+      "designation": "ICU Nurse",
+      "department": "Nursing",
+      "phone": "01811000009",
+      "about": "Specializes in intensive care unit support.",
+      "created_at": "2026-10-15 18:52:48",
+      "updated_at": "2026-10-15 18:52:48"
+    },
+    {
+      "id": 10,
+      "user_id": 32,
+      "designation": "Financial Analyst",
+      "department": "Finance",
+      "phone": "01811000010",
+      "about": "Analyzes financial data and forecasts.",
+      "created_at": "2026-10-15 18:52:48",
+      "updated_at": "2026-10-15 18:52:48"
+    },
+    {
+      "id": 11,
+      "user_id": 33,
+      "designation": "Security Supervisor",
+      "department": "Security",
+      "phone": "01811000011",
+      "about": "Supervises security team and protocols.",
+      "created_at": "2026-10-15 18:52:48",
+      "updated_at": "2026-10-15 18:52:48"
+    },
+    {
+      "id": 12,
+      "user_id": 34,
+      "designation": "Laundry Attendant",
+      "department": "Housekeeping",
+      "phone": "01811000012",
+      "about": "Manages hospital laundry services.",
+      "created_at": "2026-10-15 18:52:49",
+      "updated_at": "2026-10-15 18:52:49"
+    },
+    {
+      "id": 13,
+      "user_id": 35,
+      "designation": "Pediatric Nurse",
+      "department": "Nursing",
+      "phone": "01811000013",
+      "about": "Cares for pediatric patients.",
+      "created_at": "2026-10-15 18:52:49",
+      "updated_at": "2026-10-15 18:52:49"
+    },
+    {
+      "id": 14,
+      "user_id": 36,
+      "designation": "Payroll Clerk",
+      "department": "Finance",
+      "phone": "01811000014",
+      "about": "Processes employee salaries and benefits.",
+      "created_at": "2026-10-15 18:52:50",
+      "updated_at": "2026-10-15 18:52:50"
+    },
+    {
+      "id": 15,
+      "user_id": 37,
+      "designation": "Gate Security",
+      "department": "Security",
+      "phone": "01811000015",
+      "about": "Manages entry and exit at main gate.",
+      "created_at": "2026-10-15 18:52:51",
+      "updated_at": "2026-10-15 18:52:51"
+    },
+    {
+      "id": 16,
+      "user_id": 38,
+      "designation": "Sanitizer",
+      "department": "Housekeeping",
+      "phone": "01811000016",
+      "about": "Ensures sanitation in operating rooms.",
+      "created_at": "2026-10-15 18:52:51",
+      "updated_at": "2026-10-15 18:52:51"
+    },
+    {
+      "id": 17,
+      "user_id": 39,
+      "designation": "Surgical Nurse",
+      "department": "Nursing",
+      "phone": "01811000017",
+      "about": "Assists in surgical procedures.",
+      "created_at": "2026-10-15 18:52:52",
+      "updated_at": "2026-10-15 18:52:52"
+    },
+    {
+      "id": 18,
+      "user_id": 40,
+      "designation": "Auditor",
+      "department": "Finance",
+      "phone": "01811000018",
+      "about": "Conducts internal audits.",
+      "created_at": "2026-10-15 18:52:53",
+      "updated_at": "2026-10-15 18:52:53"
+    },
+    {
+      "id": 19,
+      "user_id": 41,
+      "designation": "Patrol Officer",
+      "department": "Security",
+      "phone": "01811000019",
+      "about": "Patrols hospital premises.",
+      "created_at": "2026-10-15 18:52:53",
+      "updated_at": "2026-10-15 18:52:53"
+    },
+    {
+      "id": 20,
+      "user_id": 42,
+      "designation": "Cleaner",
+      "department": "Housekeeping",
+      "phone": "01811000020",
+      "about": "General cleaning and maintenance.",
+      "created_at": "2026-10-15 18:52:54",
+      "updated_at": "2026-10-15 18:52:54"
+    }
+  ],
+  "health_checks": [
+    {
+      "id": 1,
+      "name": "Basic Health Check",
+      "price": "৳2,500",
+      "features": "[\"Blood Tests\",\"Urine Analysis\",\"Basic Consultation\",\"BMI Calculation\"]",
+      "popular": 0,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 2,
+      "name": "Executive Health Check",
+      "price": "৳5,000",
+      "features": "[\"Complete Blood Count\",\"Liver Function Test\",\"Cardiac Screening\",\"Diabetes Panel\",\"Doctor Consultation\"]",
+      "popular": 1,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 3,
+      "name": "Comprehensive Health Check",
+      "price": "৳8,000",
+      "features": "[\"All Executive Features\",\"Cancer Markers\",\"Advanced Cardiac Tests\",\"Full Body Checkup\",\"Specialist Consultation\"]",
+      "popular": 0,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    }
+  ],
+  "diagnostic_services": [
+    {
+      "id": 1,
+      "name": "Blood Test",
+      "image": null,
+      "price": 50,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Comprehensive blood test for various health parameters.",
+      "duration": 30,
+      "home_collection_available": 1,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 2,
+      "name": "X-Ray Chest",
+      "image": null,
+      "price": 100,
+      "category": "Radiology",
+      "sample_type": "N/A",
+      "description": "Chest X-ray to examine lungs and heart.",
+      "duration": 15,
+      "home_collection_available": 0,
+      "report_time": 2,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 3,
+      "name": "Urine Test",
+      "image": null,
+      "price": 30,
+      "category": "Laboratory",
+      "sample_type": "Urine",
+      "description": "Routine urine analysis for kidney function and infections.",
+      "duration": 10,
+      "home_collection_available": 1,
+      "report_time": 12,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 4,
+      "name": "Stool Test",
+      "image": null,
+      "price": 40,
+      "category": "Laboratory",
+      "sample_type": "Stool",
+      "description": "Stool analysis for digestive health and infections.",
+      "duration": 15,
+      "home_collection_available": 1,
+      "report_time": 18,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 5,
+      "name": "MRI Brain",
+      "image": null,
+      "price": 500,
+      "category": "Radiology",
+      "sample_type": "N/A",
+      "description": "Magnetic Resonance Imaging of the brain for detailed scans.",
+      "duration": 45,
+      "home_collection_available": 0,
+      "report_time": 48,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 6,
+      "name": "ECG",
+      "image": null,
+      "price": 80,
+      "category": "Cardiology",
+      "sample_type": "N/A",
+      "description": "Electrocardiogram to monitor heart activity.",
+      "duration": 20,
+      "home_collection_available": 0,
+      "report_time": 6,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 7,
+      "name": "Ultrasound Abdomen",
+      "image": null,
+      "price": 150,
+      "category": "Radiology",
+      "sample_type": "N/A",
+      "description": "Abdominal ultrasound for liver, kidneys, and other organs.",
+      "duration": 30,
+      "home_collection_available": 0,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 8,
+      "name": "Thyroid Function Test",
+      "image": null,
+      "price": 60,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Blood test to assess thyroid hormone levels.",
+      "duration": 10,
+      "home_collection_available": 1,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 9,
+      "name": "CT Scan Chest",
+      "image": null,
+      "price": 300,
+      "category": "Radiology",
+      "sample_type": "N/A",
+      "description": "Computed Tomography scan of the chest.",
+      "duration": 20,
+      "home_collection_available": 0,
+      "report_time": 12,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 10,
+      "name": "Lipid Profile",
+      "image": null,
+      "price": 70,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Blood test for cholesterol and lipid levels.",
+      "duration": 10,
+      "home_collection_available": 1,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 11,
+      "name": "Mammography",
+      "image": null,
+      "price": 120,
+      "category": "Radiology",
+      "sample_type": "N/A",
+      "description": "X-ray examination of the breasts.",
+      "duration": 25,
+      "home_collection_available": 0,
+      "report_time": 48,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 12,
+      "name": "Liver Function Test",
+      "image": null,
+      "price": 55,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Blood test to evaluate liver health.",
+      "duration": 10,
+      "home_collection_available": 1,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 13,
+      "name": "Bone Density Scan",
+      "image": null,
+      "price": 200,
+      "category": "Radiology",
+      "sample_type": "N/A",
+      "description": "DEXA scan to measure bone density.",
+      "duration": 15,
+      "home_collection_available": 0,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 14,
+      "name": "Hemoglobin Test",
+      "image": null,
+      "price": 25,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Blood test for hemoglobin levels.",
+      "duration": 5,
+      "home_collection_available": 1,
+      "report_time": 12,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 15,
+      "name": "Echo Cardiogram",
+      "image": null,
+      "price": 250,
+      "category": "Cardiology",
+      "sample_type": "N/A",
+      "description": "Ultrasound of the heart to assess function.",
+      "duration": 40,
+      "home_collection_available": 0,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 16,
+      "name": "Glucose Tolerance Test",
+      "image": null,
+      "price": 90,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Blood test for diabetes screening.",
+      "duration": 120,
+      "home_collection_available": 0,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 17,
+      "name": "PET Scan",
+      "image": null,
+      "price": 800,
+      "category": "Radiology",
+      "sample_type": "N/A",
+      "description": "Positron Emission Tomography for metabolic imaging.",
+      "duration": 60,
+      "home_collection_available": 0,
+      "report_time": 72,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 18,
+      "name": "Vitamin D Test",
+      "image": null,
+      "price": 45,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Blood test for vitamin D levels.",
+      "duration": 10,
+      "home_collection_available": 1,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 19,
+      "name": "Colonoscopy Preparation",
+      "image": null,
+      "price": 100,
+      "category": "Pathology",
+      "sample_type": "N/A",
+      "description": "Preparation and procedure for colon examination.",
+      "duration": 180,
+      "home_collection_available": 0,
+      "report_time": 48,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 20,
+      "name": "Allergy Test",
+      "image": null,
+      "price": 150,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Blood test to identify allergies.",
+      "duration": 20,
+      "home_collection_available": 1,
+      "report_time": 48,
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 21,
+      "name": "Complete Blood Count (CBC)",
+      "image": null,
+      "price": 35,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Comprehensive blood count for red cells, white cells, and platelets.",
+      "duration": 15,
+      "home_collection_available": 1,
+      "report_time": 12,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 22,
+      "name": "Kidney Function Test",
+      "image": null,
+      "price": 60,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Blood test to assess kidney function and creatinine levels.",
+      "duration": 10,
+      "home_collection_available": 1,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 23,
+      "name": "HbA1c Test",
+      "image": null,
+      "price": 50,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Blood test for average blood sugar levels over past months.",
+      "duration": 10,
+      "home_collection_available": 1,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 24,
+      "name": "PSA Test",
+      "image": null,
+      "price": 75,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Prostate Specific Antigen test for prostate health.",
+      "duration": 10,
+      "home_collection_available": 1,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 25,
+      "name": "Pap Smear",
+      "image": null,
+      "price": 80,
+      "category": "Laboratory",
+      "sample_type": "Cervical",
+      "description": "Screening test for cervical cancer.",
+      "duration": 20,
+      "home_collection_available": 0,
+      "report_time": 72,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 26,
+      "name": "ESR Test",
+      "image": null,
+      "price": 20,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Erythrocyte Sedimentation Rate test for inflammation.",
+      "duration": 10,
+      "home_collection_available": 1,
+      "report_time": 12,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 27,
+      "name": "Vitamin B12 Test",
+      "image": null,
+      "price": 40,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Blood test for vitamin B12 levels.",
+      "duration": 10,
+      "home_collection_available": 1,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 28,
+      "name": "Iron Test",
+      "image": null,
+      "price": 30,
+      "category": "Laboratory",
+      "sample_type": "Blood",
+      "description": "Blood test for iron levels and anemia.",
+      "duration": 10,
+      "home_collection_available": 1,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 29,
+      "name": "Bone Marrow Biopsy",
+      "image": null,
+      "price": 400,
+      "category": "Radiology",
+      "sample_type": "Bone Marrow",
+      "description": "Biopsy of bone marrow for diagnostic purposes.",
+      "duration": 60,
+      "home_collection_available": 0,
+      "report_time": 96,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 30,
+      "name": "Angiography",
+      "image": null,
+      "price": 600,
+      "category": "Radiology",
+      "sample_type": "N/A",
+      "description": "Imaging of blood vessels using contrast dye.",
+      "duration": 90,
+      "home_collection_available": 0,
+      "report_time": 48,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 31,
+      "name": "DEXA Scan",
+      "image": null,
+      "price": 200,
+      "category": "Radiology",
+      "sample_type": "N/A",
+      "description": "Dual-energy X-ray absorptiometry for bone density.",
+      "duration": 15,
+      "home_collection_available": 0,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 32,
+      "name": "Holter Monitor",
+      "image": null,
+      "price": 150,
+      "category": "Cardiology",
+      "sample_type": "N/A",
+      "description": "Portable device to monitor heart rhythm over 24-48 hours.",
+      "duration": 1440,
+      "home_collection_available": 0,
+      "report_time": 72,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 33,
+      "name": "Stress Test",
+      "image": null,
+      "price": 200,
+      "category": "Cardiology",
+      "sample_type": "N/A",
+      "description": "Exercise stress test to evaluate heart function.",
+      "duration": 60,
+      "home_collection_available": 0,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 34,
+      "name": "Cardiac Catheterization",
+      "image": null,
+      "price": 1000,
+      "category": "Cardiology",
+      "sample_type": "N/A",
+      "description": "Procedure to examine heart and blood vessels.",
+      "duration": 120,
+      "home_collection_available": 0,
+      "report_time": 48,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 35,
+      "name": "Biopsy",
+      "image": null,
+      "price": 250,
+      "category": "Pathology",
+      "sample_type": "Tissue",
+      "description": "Removal of tissue sample for examination.",
+      "duration": 30,
+      "home_collection_available": 0,
+      "report_time": 120,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 36,
+      "name": "Fine Needle Aspiration",
+      "image": null,
+      "price": 180,
+      "category": "Pathology",
+      "sample_type": "Tissue",
+      "description": "Aspiration of cells from a lump for diagnosis.",
+      "duration": 20,
+      "home_collection_available": 0,
+      "report_time": 72,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 37,
+      "name": "EEG",
+      "image": null,
+      "price": 300,
+      "category": "Neurology",
+      "sample_type": "N/A",
+      "description": "Electroencephalogram to record brain activity.",
+      "duration": 60,
+      "home_collection_available": 0,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 38,
+      "name": "EMG",
+      "image": null,
+      "price": 250,
+      "category": "Neurology",
+      "sample_type": "N/A",
+      "description": "Electromyography to assess muscle and nerve function.",
+      "duration": 45,
+      "home_collection_available": 0,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 39,
+      "name": "Endoscopy",
+      "image": null,
+      "price": 350,
+      "category": "Gastroenterology",
+      "sample_type": "N/A",
+      "description": "Procedure to examine the digestive tract.",
+      "duration": 30,
+      "home_collection_available": 0,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 40,
+      "name": "Bronchoscopy",
+      "image": null,
+      "price": 400,
+      "category": "Pulmonology",
+      "sample_type": "N/A",
+      "description": "Examination of the airways and lungs.",
+      "duration": 45,
+      "home_collection_available": 0,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 41,
+      "name": "Cystoscopy",
+      "image": null,
+      "price": 300,
+      "category": "Urology",
+      "sample_type": "N/A",
+      "description": "Examination of the bladder and urethra.",
+      "duration": 30,
+      "home_collection_available": 0,
+      "report_time": 24,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 42,
+      "name": "Spirometry",
+      "image": null,
+      "price": 50,
+      "category": "Pulmonology",
+      "sample_type": "N/A",
+      "description": "Test to measure lung function.",
+      "duration": 20,
+      "home_collection_available": 0,
+      "report_time": 6,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    },
+    {
+      "id": 43,
+      "name": "Audiometry",
+      "image": null,
+      "price": 100,
+      "category": "Otolaryngology",
+      "sample_type": "N/A",
+      "description": "Hearing test to assess auditory function.",
+      "duration": 30,
+      "home_collection_available": 0,
+      "report_time": 12,
+      "created_at": "2026-10-15 18:52:57",
+      "updated_at": "2026-10-15 18:52:57"
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "Xet Hospital Launches Advanced Cancer Center",
+      "excerpt": "New state-of-the-art cancer treatment facility now open with latest technology.",
+      "content": "Xet Hospital is proud to announce the opening of our new Advanced Cancer Center, equipped with the latest radiation therapy machines, chemotherapy suites, and supportive care facilities. This center represents a significant investment in our commitment to providing world-class cancer care to our patients.",
+      "image": "",
+      "category": "Facility Update",
+      "date": "2024-12-15",
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 2,
+      "title": "Breakthrough in Minimally Invasive Surgery",
+      "excerpt": "Our surgeons successfully perform complex procedures with faster recovery times.",
+      "content": "Our surgical team has achieved remarkable success in minimally invasive procedures, including laparoscopic surgeries and robotic-assisted operations. These techniques result in smaller incisions, reduced pain, and quicker recovery for patients.",
+      "image": "",
+      "category": "Medical Innovation",
+      "date": "2024-12-10",
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 3,
+      "title": "Free Health Camp for Underprivileged Communities",
+      "excerpt": "Xet Hospital organizes health screening camp serving 500+ patients.",
+      "content": "In our ongoing commitment to community health, Xet Hospital conducted a free health screening camp in partnership with local NGOs. Over 500 patients received comprehensive health check-ups, consultations, and necessary medications at no cost.",
+      "image": "",
+      "category": "Community Service",
+      "date": "2024-12-05",
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 4,
+      "title": "Xet Hospital Introduces Telemedicine Services",
+      "excerpt": "New virtual consultation platform launched for remote patient care.",
+      "content": "Xet Hospital has launched a comprehensive telemedicine platform, allowing patients to consult with doctors remotely via video calls and secure messaging. This initiative aims to improve access to healthcare, especially for those in remote areas or with mobility challenges.",
+      "image": "",
+      "category": "Technology Update",
+      "date": "2024-11-30",
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 5,
+      "title": "Hospital Receives Accreditation for Excellence in Patient Care",
+      "excerpt": "Xet Hospital awarded top accreditation for quality and safety standards.",
+      "content": "Xet Hospital has been awarded the prestigious Healthcare Excellence Accreditation for maintaining the highest standards in patient care, safety protocols, and medical outcomes. This recognition underscores our commitment to providing exceptional healthcare services.",
+      "image": "",
+      "category": "Awards & Recognition",
+      "date": "2024-11-25",
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 6,
+      "title": "New MRI Machine Enhances Diagnostic Capabilities",
+      "excerpt": "State-of-the-art MRI equipment installed for advanced imaging services.",
+      "content": "Xet Hospital has installed a cutting-edge 3T MRI machine, providing high-resolution imaging for accurate diagnosis of various medical conditions. This new equipment will significantly improve our diagnostic capabilities and patient outcomes.",
+      "image": "",
+      "category": "Facility Update",
+      "date": "2024-11-20",
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    },
+    {
+      "id": 7,
+      "title": "Annual Health Awareness Campaign Launched",
+      "excerpt": "Xet Hospital kicks off campaign to promote preventive healthcare.",
+      "content": "Xet Hospital has launched its annual Health Awareness Campaign, focusing on preventive care, healthy lifestyle choices, and early disease detection. The campaign includes free screenings, educational seminars, and community outreach programs.",
+      "image": "",
+      "category": "Community Service",
+      "date": "2024-11-15",
+      "created_at": "2026-10-15 18:52:56",
+      "updated_at": "2026-10-15 18:52:56"
+    }
+  ]
+}
