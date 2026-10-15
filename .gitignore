@@ -1,18 +1,27 @@
+# Ket qua build, kiem thu va cong cu cuc bo
 **/bin/
 **/obj/
-.vs/
 **/TestResults/
-**/App_Data/MailOutbox/
-**/App_Data/Results/
 artifacts/
+
+# Tuy chon IDE cua tung may
+.vs/
 *.user
 *.suo
+
+# Cau hinh rieng va log
 appsettings.Local.json
+**/appsettings.*.local.json
 *.log
 .env
 .env.*
+
+# Du lieu va tep nghiep vu phat sinh khi chay
+**/App_Data/MailOutbox/
+**/App_Data/Results/
 *.sqlite
 *.db
 *.bak
-**/appsettings.*.local.json
+
+# Snapshot rieng; danh muc mau cong khai dung snapshot.example.json
 HospitalManagement.Web/Data/Legacy/snapshot.json
