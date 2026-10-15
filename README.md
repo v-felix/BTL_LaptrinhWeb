@@ -1,20 +1,44 @@
-# Hospital Management — ASP.NET Core MVC
+# Hospital Management — Hệ thống quản lý bệnh viện
 
-Đã chuyển Laravel 12 + Vue 3 sang **ASP.NET Core MVC (.NET 8) + Entity Framework Core 8 + Microsoft SQL Server**. Giao diện Razor Views, Bootstrap 5 và JavaScript thuần; tài nguyên được lưu cục bộ. Chạy bằng Visual Studio, không cần PHP, Composer, Node.js, npm hay Vite.
+Hospital Management là đồ án môn **Lập trình Web**, xây dựng hệ thống hỗ trợ đặt lịch và quản lý hoạt động khám bệnh tại Xet Hospital. Hệ thống kết nối bệnh nhân, bác sĩ, nhân viên tiếp nhận, kỹ thuật viên và quản trị viên trong các công việc: tiếp nhận lịch hẹn, khám và kê đơn, trả kết quả xét nghiệm, đăng ký gói khám và theo dõi hồ sơ.
 
-## Chạy bằng Visual Studio
+## Sơ đồ phân tầng chức năng
 
-1. Mở **HospitalManagement.sln** bằng Visual Studio 2022 (17.8 trở lên) hoặc Visual Studio 2026, có workload **ASP.NET and web development** và .NET 8 SDK.
-2. Nhấn chuột phải **HospitalManagement.Web → Set as Startup Project**.
-3. Kiểm tra dịch vụ **SQL Server (SQLEXPRESS)** đang chạy. Connection string nằm trong `HospitalManagement.Web/appsettings.json`: server `.\SQLEXPRESS`, database **HospitalManagementMvc**, xác thực Windows. Nếu dùng instance khác, sửa `Server` cho phù hợp. Tài khoản Windows chạy Visual Studio cần quyền tạo/truy cập database.
-4. Chờ NuGet restore, chọn profile **HospitalManagement.Web**, nhấn **F5** hoặc **Ctrl+F5**.
-5. Trình duyệt mở **http://localhost:5080**. Development tự áp dụng migration và nhập dữ liệu mẫu ở lần đầu; những lần sau không nhập trùng.
+```mermaid
+flowchart TB
+    HT["Hệ thống quản lý bệnh viện"]
+    HT --> CK["Tra cứu công khai"]
+    HT --> BN["Bệnh nhân"]
+    HT --> BS["Bác sĩ"]
+    HT --> TN["Nhân viên tiếp nhận"]
+    HT --> KTV["Kỹ thuật viên"]
+    HT --> QT["Quản trị viên"]
 
-Profile `https` chạy tại `https://localhost:7080`; có thể cần `dotnet dev-certs https --trust`. Profile HTTP mặc định không cần chứng chỉ. IIS Express cũng được cấu hình.
+    CK --> CK1["Bác sĩ và chuyên khoa<br/>Dịch vụ, gói khám, tin tức"]
+    CK --> CK2["Xem lịch làm việc<br/>Đặt lịch khám không cần tài khoản"]
+    BN --> BN1["Tài khoản và hồ sơ cá nhân"]
+    BN --> BN2["Đặt khám, xét nghiệm, gói khám<br/>Theo dõi và hủy lịch hẹn"]
+    BN --> BN3["Xem đơn thuốc, kết quả<br/>Tải phiếu PDF"]
+    BS --> BS1["Lịch làm việc<br/>Thông báo điều phối"]
+    BS --> BS2["Tiếp nhận lịch khám<br/>Khám và kê đơn"]
+    TN --> TN1["Lịch khám trong ngày<br/>Xác nhận hoặc hủy lịch hẹn"]
+    TN --> TN2["Tiếp nhận gói khám<br/>Ghi nhận số tiền thực thu"]
+    KTV --> KTV1["Danh mục xét nghiệm<br/>Tiếp nhận phiếu, ghi nhận thanh toán"]
+    KTV --> KTV2["Nhập kết quả và kết luận<br/>Đính kèm kết quả PDF"]
+    QT --> QT1["Thống kê tổng quan<br/>Tài khoản và phân quyền"]
+    QT --> QT2["Bác sĩ, nhân viên, ca làm việc<br/>Điều phối lịch hẹn, gói khám"]
+    QT --> QT3["Dịch vụ, gói khám, tin tức<br/>Thông báo cho bác sĩ"]
+```
 
-Trên máy bàn giao đã chuẩn bị thêm SDK .NET 8 ổn định tại `artifacts/dotnet` vì SDK hệ thống đang được bộ cài thay đổi. Nếu mở solution trực tiếp gặp lỗi SDK hoặc thiếu runtime, chạy `scripts/Open-VisualStudio.ps1` để mở IDE với SDK này rồi F5 như bình thường. Script chỉ đặt môi trường cho tiến trình IDE, không đổi cấu hình hệ thống. Thư mục SDK này không cần đưa vào mã nguồn khi chia sẻ; máy khác chỉ cần cài .NET 8 SDK chuẩn.
+## Truy cập và đăng nhập
 
-## Tài khoản thử
+1. Mở địa chỉ website được cung cấp. Bản chạy trên máy cá nhân mặc định dùng **http://localhost:5080**.
+2. Chọn **Đăng nhập**, nhập email và mật khẩu.
+3. Chọn **Không gian của tôi** để vào phân hệ tương ứng với vai trò tài khoản.
+4. Người bệnh chưa có tài khoản có thể chọn **Đăng ký bệnh nhân**. Để thay đổi thông tin hoặc mật khẩu, mở **Hồ sơ cá nhân**.
+5. Chọn **Đăng xuất** khi sử dụng xong hoặc muốn chuyển sang tài khoản khác.
+
+### Tài khoản thử
 
 | Vai trò | Email | Mật khẩu |
 |---|---|---|
@@ -24,68 +48,79 @@ Trên máy bàn giao đã chuẩn bị thêm SDK .NET 8 ổn định tại `arti
 | Tiếp nhận | staff@example.com | staff123 |
 | Bệnh nhân | patient@example.com | patient123 |
 
-Tài khoản cũ giữ nguyên email và mật khẩu. Hash bcrypt Laravel được kiểm tra và tự nâng cấp sang Identity khi đăng nhập thành công. Tài khoản mẫu chỉ được bổ sung trong Development.
+## Hướng dẫn dành cho bệnh nhân
 
-## Chức năng
+### Đặt lịch khám
 
-- Khách: tìm bác sĩ/chuyên khoa, xem lịch làm việc, tin tức, gói khám/dịch vụ; đặt lịch khám và tải phiếu qua liên kết riêng.
-- Bệnh nhân: đăng ký/đăng nhập, sửa thông tin, đổi/đặt lại mật khẩu; đặt khám, xét nghiệm, gói khám; hủy lịch phù hợp; xem đơn thuốc, kết quả và tải PDF.
-- Bác sĩ: quản lý ca trong tuần, xem đúng bệnh nhân của mình, xác nhận/hủy lịch, khám/kê đơn và nhận thông báo điều phối.
-- Quản trị: dashboard, CRUD tài khoản/bác sĩ/nhân viên, phân quyền, khóa đăng nhập, lịch làm việc, thông báo nội bộ, CRUD dịch vụ/gói khám/tin tức, điều phối lịch hẹn và phiếu gói khám.
-- Kỹ thuật viên: danh mục xét nghiệm, tiếp nhận phiếu, ghi nhận thanh toán, nhập kết quả và đính kèm PDF.
-- Nhân viên tiếp nhận: lịch khám hôm nay, xác nhận/hủy lịch, tiếp nhận gói khám và ghi nhận số tiền thực thu.
+1. Chọn **Bác sĩ** để xem chuyên khoa, thông tin và lịch làm việc, hoặc chọn **Đặt lịch khám** trên thanh điều hướng.
+2. Chọn bác sĩ, ngày khám và khung giờ còn trống.
+3. Nhập thông tin người khám, số điện thoại, email và mô tả vấn đề cần khám; kiểm tra thông tin trước khi gửi.
+4. Sau khi đặt thành công, xem mã lịch hẹn, số thứ tự, giờ khám và trạng thái trên phiếu. Có thể tải phiếu PDF để lưu lại.
+5. Nếu đặt khi đã đăng nhập, mở **Không gian của tôi** để theo dõi lịch hẹn. Nếu đặt không cần tài khoản, lưu đường dẫn phiếu được mở sau khi đặt để xem lại.
 
-## Dữ liệu đã chuyển
+Lịch hẹn mới ở trạng thái **Chờ xác nhận**. Nếu khung giờ vừa hết chỗ, chọn một khung giờ khác. Chỉ có thể hủy lịch chưa hoàn tất, chưa hủy và chưa đến giờ khám; nhập lý do khi hệ thống yêu cầu.
 
-Đã nhập từ SQLite nguồn: **47 tài khoản, 21 bác sĩ, 20 nhân viên, 43 dịch vụ, 3 gói khám, 7 bài tin**. Bổ sung 2 tài khoản mẫu và 126 ca khám mẫu (thứ 2–thứ 7, 08:00–12:00). Nguồn chưa có lịch làm việc, lịch hẹn, phiếu gói khám, xét nghiệm hoặc đơn thuốc. Banner có sẵn được tái sử dụng; nguồn không có thư mục upload ảnh bác sĩ.
+### Đăng ký xét nghiệm
 
-**Tiền tệ:** danh mục nguồn dùng Bangladesh taka (`৳`), được giữ nguyên giá và ghi rõ **BDT**. Ca khám mẫu và danh mục mới mặc định **VND**. Quản trị có thể sửa giá cùng đơn vị tiền. Không tự quy đổi tỷ giá hoặc cộng tổng các đơn vị tiền khác nhau. Phiếu lưu giá và đơn vị tiền tại thời điểm đặt.
+1. Đăng nhập, chọn **Xét nghiệm**, tìm dịch vụ theo tên hoặc nhóm.
+2. Xem giá dịch vụ, chọn đăng ký rồi điền ngày, giờ và thông tin liên hệ. Có thể nhập mã lịch khám thuộc tài khoản để liên kết phiếu.
+3. Theo dõi phiếu tại **Không gian của tôi**. Khi kỹ thuật viên trả kết quả, mở chi tiết để xem nội dung, kết luận và tải tệp PDF đính kèm nếu có.
 
-`HospitalManagement.Web/Data/Legacy/snapshot.json` chỉ phục vụ khởi tạo; mọi truy vấn/ghi khi chạy đều qua EF Core và SQL Server. Snapshot chứa hash mật khẩu cũ và nằm ngoài `wwwroot`. Session, cache và token reset cũ không chuyển sang hệ thống xác thực mới.
+### Đăng ký gói khám
 
-Bản trên GitHub không chứa `snapshot.json` riêng của máy nguồn. Khi clone mới, ứng dụng dùng `snapshot.example.json` đã bỏ toàn bộ hash mật khẩu và dùng địa chỉ email mẫu dưới `example.com`. Các tài khoản demo được tạo bằng Identity với mật khẩu trong bảng trên; bác sĩ/nhân viên/kỹ thuật viên mẫu khác dùng lần lượt `doctor123`/`staff123`/`diagnostic123`. Nếu có `snapshot.json` ở máy hiện tại, luồng nhập dữ liệu cũ vẫn được ưu tiên.
+1. Đăng nhập, chọn **Gói khám** và xem quyền lợi, giá của gói.
+2. Chọn gói, ngày khám từ ngày mai và mức đặt cọc được cung cấp trên biểu mẫu.
+3. Kiểm tra mã phiếu, tổng tiền và số tiền đã thu trong trang chi tiết; có thể tải phiếu PDF.
+4. Liên hệ bộ phận tiếp nhận để thanh toán. Chọn mức đặt cọc khi đăng ký chưa được tính là đã trả tiền.
 
-## Email, PDF và thanh toán
+### Xem hồ sơ và đơn thuốc
 
-Development mặc định `Email:Mode=File`: thư được lưu thành `.eml` tại `HospitalManagement.Web/App_Data/MailOutbox`, **không gửi ra Internet**. Luồng quên mật khẩu cũng dùng kênh này; mở thư mới nhất để lấy liên kết thử.
+Mở **Không gian của tôi**, chọn lịch khám, phiếu xét nghiệm hoặc gói khám cần xem. Sau khi bác sĩ hoàn tất khám, chi tiết lịch hẹn hiển thị chẩn đoán, thuốc và lời dặn. Tải phiếu PDF để lưu thông tin. Tài khoản chỉ xem được hồ sơ thuộc quyền truy cập của mình.
 
-Muốn gửi SMTP, dùng User Secrets hoặc biến môi trường `Email__Host`, `Email__Port`, `Email__User`, `Email__Password`; đặt `Email__Mode=Smtp` và chỉnh `Email__PublicBaseUrl`. Email gửi liên kết tới phiếu/PDF có kiểm tra quyền truy cập.
+## Hướng dẫn dành cho bác sĩ
 
-PDF dùng PDFsharp với font DejaVu nhúng, hỗ trợ tiếng Việt. PDF kết quả được upload lưu ngoài `wwwroot` tại `App_Data/Results` và tải qua controller có phân quyền. Font/giấy phép đi kèm dự án.
+1. Đăng nhập bằng tài khoản bác sĩ và mở **Không gian của tôi**.
+2. Xem lịch làm việc, thông báo điều phối và danh sách lịch khám được phân công; lọc theo ngày khi cần.
+3. Xác nhận lịch đang chờ trước khi khám. Nếu cần hủy, sử dụng thao tác hủy trên lịch hẹn.
+4. Với lịch đã xác nhận, mở chức năng kê đơn, nhập chẩn đoán, thông tin thuốc và lời dặn.
+5. Lưu đơn thuốc để hoàn tất lượt khám. Bệnh nhân có thể xem và tải phiếu sau đó.
 
-Thanh toán là **ghi nhận số tiền thực thu tại bệnh viện**. Đăng ký cọc 50%/100% không tự ghi nhận đã trả tiền. Chưa tích hợp ngân hàng hoặc SMS. Phiếu bị hủy sau khi thu tiền không tự được coi là đã hoàn tiền.
+## Hướng dẫn dành cho nhân viên tiếp nhận
 
-## Lệnh tùy chọn
+1. Đăng nhập bằng tài khoản tiếp nhận, xem danh sách lịch khám trong ngày.
+2. Đối chiếu mã lịch hẹn và thông tin bệnh nhân; vào danh sách lịch hẹn để xác nhận hoặc hủy theo tình hình tiếp nhận.
+3. Mở danh sách phiếu gói khám, kiểm tra ngày khám, gói đã chọn và trạng thái.
+4. Khi bệnh nhân thanh toán, cập nhật **số tiền thực thu** và lưu phiếu. Kiểm tra lại số tiền đã thu trước khi kết thúc thao tác.
 
-Chạy ở thư mục chứa solution:
+## Hướng dẫn dành cho kỹ thuật viên
 
-```powershell
-dotnet restore
-dotnet tool restore
-dotnet run --project HospitalManagement.Web
-```
+1. Đăng nhập bằng tài khoản kỹ thuật viên, mở danh sách phiếu xét nghiệm.
+2. Lọc theo ngày hoặc trạng thái, kiểm tra thông tin dịch vụ và bệnh nhân.
+3. Xác nhận tiếp nhận phiếu, cập nhật trạng thái thanh toán theo thực tế.
+4. Với phiếu đã xác nhận, mở phần trả kết quả, nhập nội dung và kết luận. Có thể đính kèm tệp **PDF tối đa 5 MB**.
+5. Lưu kết quả để hoàn tất phiếu. Bệnh nhân xem kết quả trong hồ sơ của mình.
 
-Khởi tạo DB mà không mở web:
+## Hướng dẫn dành cho quản trị viên
 
-```powershell
-.\scripts\Initialize-Database.ps1
-```
+1. Đăng nhập bằng tài khoản quản trị, mở bảng điều khiển để xem thống kê hoạt động.
+2. Quản lý tài khoản: thêm, sửa thông tin, gán vai trò và khóa tài khoản khi cần.
+3. Quản lý bác sĩ, nhân viên và ca làm việc; kiểm tra lịch trước khi điều phối bệnh nhân.
+4. Theo dõi lịch khám, phiếu gói khám; gửi thông báo điều phối cho bác sĩ.
+5. Cập nhật danh mục dịch vụ, giá và đơn vị tiền, quyền lợi gói khám; quản lý nội dung tin tức hiển thị trên website.
 
-Migration bằng CLI:
+Khi thay đổi ca làm việc, cần kiểm tra các lịch đã đặt để điều phối phù hợp. Với tài khoản đã có hồ sơ nghiệp vụ, sử dụng chức năng khóa nếu hệ thống không cho phép xóa.
 
-```powershell
-dotnet ef database update --project HospitalManagement.Web
-dotnet ef migrations add TenThayDoi --project HospitalManagement.Web
-```
+## Trạng thái phiếu và lưu ý khi sử dụng
 
-Trong Visual Studio Package Manager Console, chọn Default project `HospitalManagement.Web`, chạy `Update-Database`. `database-schema.sql` là script schema idempotent cho SSMS, chạy trên database rỗng đã tạo; script không nhập dữ liệu mẫu. Dữ liệu mẫu được nhập khi chạy Development.
+| Trạng thái | Ý nghĩa |
+|---|---|
+| Chờ xác nhận / Pending | Phiếu đã được gửi, đang chờ bộ phận phụ trách tiếp nhận. |
+| Đã xác nhận / Confirmed | Phiếu đã được tiếp nhận để thực hiện khám hoặc dịch vụ. |
+| Hoàn tất / Completed | Đã hoàn tất lượt khám hoặc dịch vụ; kiểm tra chi tiết để xem hồ sơ. |
+| Đã hủy / Cancelled | Phiếu không tiếp tục được thực hiện. |
 
-## Kiểm thử
-
-```powershell
-dotnet test HospitalManagement.sln -c Release
-```
-
-13 test tích hợp với SQL Server thực: mật khẩu cũ, phân quyền, CRUD, tài khoản, ca khám, chống đặt trùng/công suất, chống giả mạo giá, cập nhật đồng thời, khám/kê đơn, trả kết quả, thu phí và PDF. Mỗi lần chạy tạo database riêng `HospitalManagementTests_<GUID>` rồi chỉ xóa database đó; không dùng database ứng dụng. Biến `HOSPITAL_TEST_SQLSERVER` cho phép chọn instance test khác.
-
-Chi tiết kiến trúc và kết quả kiểm chứng: [docs/BAO_CAO_CHUYEN_DOI.md](docs/BAO_CAO_CHUYEN_DOI.md).
+- Lịch và giờ hẹn sử dụng giờ Việt Nam. Ngày đặt được giới hạn tối đa 90 ngày tính từ hiện tại.
+- Giá và đơn vị tiền hiển thị trên từng phiếu là căn cứ đối chiếu. Danh mục mẫu có cả **VND** và **BDT**; kiểm tra đơn vị trước khi đăng ký hoặc thu tiền.
+- Thanh toán được nhân viên ghi nhận tại bệnh viện. Nếu hủy phiếu sau khi đã thu tiền, liên hệ bộ phận tiếp nhận để xử lý hoàn tiền.
+- Nếu hệ thống báo phiếu đã thay đổi, tải lại trang để xem thông tin mới nhất trước khi thao tác tiếp.
+- Nếu quên mật khẩu, chọn **Quên mật khẩu** tại trang đăng nhập. Nếu không nhận được liên kết đặt lại, liên hệ người quản trị hệ thống.
