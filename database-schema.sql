@@ -1,4 +1,15 @@
-﻿IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+﻿/*
+    Hospital Management - cau truc co so du lieu Microsoft SQL Server.
+    Nhom bang: Identity, bac si/nhan vien, ca va lich kham, don thuoc,
+    dich vu xet nghiem/ket qua, goi kham va thong bao.
+
+    Chay trong database dich da chon bang SSMS. Script dung lich su
+    migration de kiem tra cac phien ban schema da ap dung.
+    Chi tao/cap nhat schema; khong nhap danh muc hoac tai khoan mau.
+    Quy tac model va quan he nam trong Data/ApplicationDbContext.cs.
+*/
+
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
 BEGIN
     CREATE TABLE [__EFMigrationsHistory] (
         [MigrationId] nvarchar(150) NOT NULL,
