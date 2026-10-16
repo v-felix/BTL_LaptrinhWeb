@@ -287,7 +287,10 @@ namespace HospitalManagement.Web.Migrations
                     b.HasIndex("Reference")
                         .IsUnique();
 
-                    b.ToTable("DiagnosticBookings");
+                    b.ToTable("DiagnosticBookings", t =>
+                        {
+                            t.HasCheckConstraint("CK_DiagnosticBookings_CurrencyVnd", "[CurrencyCode] = N'VND'");
+                        });
                 });
 
             modelBuilder.Entity("HospitalManagement.Web.Models.DiagnosticService", b =>
@@ -339,7 +342,10 @@ namespace HospitalManagement.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("DiagnosticServices");
+                    b.ToTable("DiagnosticServices", t =>
+                        {
+                            t.HasCheckConstraint("CK_DiagnosticServices_CurrencyVnd", "[CurrencyCode] = N'VND'");
+                        });
                 });
 
             modelBuilder.Entity("HospitalManagement.Web.Models.Doctor", b =>
@@ -453,7 +459,10 @@ namespace HospitalManagement.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HealthChecks");
+                    b.ToTable("HealthChecks", t =>
+                        {
+                            t.HasCheckConstraint("CK_HealthChecks_CurrencyVnd", "[CurrencyCode] = N'VND'");
+                        });
                 });
 
             modelBuilder.Entity("HospitalManagement.Web.Models.News", b =>
@@ -561,7 +570,10 @@ namespace HospitalManagement.Web.Migrations
                     b.HasIndex("Reference")
                         .IsUnique();
 
-                    b.ToTable("PackageBookings");
+                    b.ToTable("PackageBookings", t =>
+                        {
+                            t.HasCheckConstraint("CK_PackageBookings_CurrencyVnd", "[CurrencyCode] = N'VND'");
+                        });
                 });
 
             modelBuilder.Entity("HospitalManagement.Web.Models.Prescription", b =>

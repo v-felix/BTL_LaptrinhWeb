@@ -11,6 +11,8 @@ Project kiểm thử tích hợp dùng xUnit, ASP.NET Core MVC TestServer và **
 - Phân quyền hồ sơ, bảo vệ biểu mẫu và xung đột phiên bản phiếu.
 - Đăng ký xét nghiệm, tiếp nhận, trả kết quả và tải PDF.
 - Gói khám và ghi nhận số tiền thực thu.
+- Nâng cấp danh mục tiếng Việt và VND trên database đã có dữ liệu; bảo toàn tỷ lệ tiền đã thu và không cập nhật lặp.
+- Chặn đơn vị tiền khác VND ở biểu mẫu và cả ràng buộc SQL Server.
 - Quản lý danh mục, tài khoản, bác sĩ, ca khám và thông báo.
 - Đăng ký, đổi thông tin, đổi mật khẩu, khóa phiên và bảo vệ hồ sơ có liên quan.
 

@@ -168,8 +168,8 @@ public class HospitalWorkflowsTests(HospitalFactory factory) : IClassFixture<Hos
         });
         Assert.Equal(HttpStatusCode.Redirect, response.StatusCode);
         var booking = await Query(db => db.DiagnosticBookings.SingleAsync(x => x.PatientName == "Xét nghiệm kiểm thử"));
-        Assert.Equal(50, booking.Price);
-        Assert.Equal("BDT", booking.CurrencyCode);
+        Assert.Equal(50000, booking.Price);
+        Assert.Equal("VND", booking.CurrencyCode);
         using var technician = await Login("diagnostic@example.com", "diagnostic123");
         var confirmed = await Post(technician, "/Diagnostic/Booking", "/Diagnostic/Booking/Status", new()
         { ["id"] = booking.Id.ToString(), ["status"] = "Confirmed", ["paymentStatus"] = "Paid", ["rowVersion"] = Convert.ToBase64String(booking.RowVersion) });
@@ -192,13 +192,13 @@ public class HospitalWorkflowsTests(HospitalFactory factory) : IClassFixture<Hos
         { ["PackageId"] = "1", ["BookingDate"] = FutureDay(13).ToString("yyyy-MM-dd"), ["DepositPercent"] = "50", ["AmountPaid"] = "9999", ["TotalAmount"] = "1" });
         Assert.Equal(HttpStatusCode.Redirect, response.StatusCode);
         var booking = await Query(db => db.PackageBookings.OrderByDescending(x => x.Id).FirstAsync());
-        Assert.Equal(2500, booking.TotalAmount); Assert.Equal(0, booking.AmountPaid);
-        Assert.Equal("BDT", booking.CurrencyCode);
+        Assert.Equal(2500000, booking.TotalAmount); Assert.Equal(0, booking.AmountPaid);
+        Assert.Equal("VND", booking.CurrencyCode);
         using var staff = await Login("staff@example.com", "staff123");
         var paid = await Post(staff, "/Admin/PackageBooking", "/Admin/PackageBooking/Update", new()
-        { ["id"] = booking.Id.ToString(), ["status"] = "Confirmed", ["amountPaid"] = "1250", ["rowVersion"] = Convert.ToBase64String(booking.RowVersion) });
+        { ["id"] = booking.Id.ToString(), ["status"] = "Confirmed", ["amountPaid"] = "1250000", ["rowVersion"] = Convert.ToBase64String(booking.RowVersion) });
         Assert.Equal(HttpStatusCode.Redirect, paid.StatusCode);
-        Assert.Equal(1250, await Query(db => db.PackageBookings.Where(x => x.Id == booking.Id).Select(x => x.AmountPaid).SingleAsync()));
+        Assert.Equal(1250000, await Query(db => db.PackageBookings.Where(x => x.Id == booking.Id).Select(x => x.AmountPaid).SingleAsync()));
         Assert.Equal("application/pdf", (await patient.GetAsync("/HealthPackage/Download/" + booking.Id)).Content.Headers.ContentType!.MediaType);
     }
 
@@ -317,5 +317,30 @@ public class HospitalWorkflowsTests(HospitalFactory factory) : IClassFixture<Hos
         var deletion = await Post(admin, "/Admin/User", "/Admin/User/Delete/" + doctor.UserId, new());
         Assert.Equal(HttpStatusCode.Redirect, deletion.StatusCode);
         Assert.True(await Query(context => context.Doctors.AnyAsync(x => x.Id == doctor.Id)));
+    }
+
+    [Theory]
+    [InlineData("/Admin/Service")]
+    [InlineData("/Admin/HealthCheck")]
+    public async Task Catalog_forms_reject_foreign_currency(string catalog)
+    {
+        using var admin = await Login("admin@example.com", "admin123");
+        var html = await admin.GetStringAsync(catalog + "/Create");
+        Assert.DoesNotContain("BDT", html);
+        Assert.DoesNotContain("name=\"CurrencyCode\"", html);
+        var before = catalog.EndsWith("Service")
+            ? await Query(db => db.DiagnosticServices.CountAsync())
+            : await Query(db => db.HealthChecks.CountAsync());
+        var response = await Post(admin, catalog + "/Create", catalog + "/Create", new()
+        {
+            ["Name"] = "Kiểm thử đơn vị tiền", ["Category"] = "Xét nghiệm", ["Features"] = "Khám tổng quát",
+            ["Price"] = "500000", ["Duration"] = "30", ["ReportHours"] = "24", ["CurrencyCode"] = "USD"
+        });
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        Assert.Contains("Hệ thống chỉ sử dụng Việt Nam đồng (VND).", WebUtility.HtmlDecode(await response.Content.ReadAsStringAsync()));
+        var after = catalog.EndsWith("Service")
+            ? await Query(db => db.DiagnosticServices.CountAsync())
+            : await Query(db => db.HealthChecks.CountAsync());
+        Assert.Equal(before, after);
     }
 }

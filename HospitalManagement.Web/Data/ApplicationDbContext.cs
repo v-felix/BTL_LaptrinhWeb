@@ -22,6 +22,10 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     protected override void OnModelCreating(ModelBuilder b)
     {
         base.OnModelCreating(b);
+        b.Entity<DiagnosticService>().ToTable(t => t.HasCheckConstraint("CK_DiagnosticServices_CurrencyVnd", "[CurrencyCode] = N'VND'"));
+        b.Entity<HealthCheck>().ToTable(t => t.HasCheckConstraint("CK_HealthChecks_CurrencyVnd", "[CurrencyCode] = N'VND'"));
+        b.Entity<BookingDiagnostic>().ToTable(t => t.HasCheckConstraint("CK_DiagnosticBookings_CurrencyVnd", "[CurrencyCode] = N'VND'"));
+        b.Entity<PackageBooking>().ToTable(t => t.HasCheckConstraint("CK_PackageBookings_CurrencyVnd", "[CurrencyCode] = N'VND'"));
         b.Entity<Doctor>().HasOne(x => x.User).WithOne(x => x.DoctorProfile).HasForeignKey<Doctor>(x => x.UserId);
         b.Entity<Staff>().HasOne(x => x.User).WithOne(x => x.StaffProfile).HasForeignKey<Staff>(x => x.UserId);
         b.Entity<Schedule>().HasIndex(x => new { x.DoctorId, x.DayOfWeek }).IsUnique();

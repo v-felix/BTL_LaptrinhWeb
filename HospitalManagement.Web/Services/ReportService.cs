@@ -26,12 +26,12 @@ public class ReportService
     public byte[] Diagnostic(BookingDiagnostic b) => Create("PHIẾU XÉT NGHIỆM", [
         $"Mã phiếu: {b.Reference}", $"Bệnh nhân: {b.PatientName}  |  {b.PatientPhone}",
         $"Dịch vụ: {b.DiagnosticService.Name}", $"Ngày hẹn: {b.BookingDate:dd/MM/yyyy}  -  {b.BookingTime:HH:mm}",
-        $"Giá: {Display.Money(b.Price, b.CurrencyCode)}  |  {Display.Status(b.Status)}", "",
+        $"Giá: {Display.Money(b.Price)}  |  {Display.Status(b.Status)}", "",
         .. b.TestResults.OrderBy(x => x.DeliveredAt).SelectMany(x => new[] { $"KẾT QUẢ - {x.DeliveredAt.AddHours(7):dd/MM/yyyy HH:mm}", x.Content, $"Kết luận: {x.Conclusion}", "" })]);
     public byte[] Package(PackageBooking b) => Create("PHIẾU ĐĂNG KÝ GÓI KHÁM", [
         $"Mã phiếu: {b.Reference}", $"Bệnh nhân: {b.Patient.FullName}", $"Gói khám: {b.HealthCheck.Name}",
-        $"Ngày khám: {b.BookingDate:dd/MM/yyyy}", $"Tổng phí: {Display.Money(b.TotalAmount, b.CurrencyCode)}",
-        $"Số tiền đã ghi nhận: {Display.Money(b.AmountPaid, b.CurrencyCode)}", $"Còn lại: {Display.Money(b.TotalAmount - b.AmountPaid, b.CurrencyCode)}",
+        $"Ngày khám: {b.BookingDate:dd/MM/yyyy}", $"Tổng phí: {Display.Money(b.TotalAmount)}",
+        $"Số tiền đã ghi nhận: {Display.Money(b.AmountPaid)}", $"Còn lại: {Display.Money(b.TotalAmount - b.AmountPaid)}",
         $"Trạng thái: {Display.Status(b.Status)}", $"Lý do hủy: {b.CancellationReason}" ]);
 
     private static byte[] Create(string title, IEnumerable<string> content)

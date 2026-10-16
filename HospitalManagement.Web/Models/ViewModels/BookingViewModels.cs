@@ -60,7 +60,7 @@ public class DashboardVM
     public int Patients { get; set; }
     public int Pending { get; set; }
     public int Today { get; set; }
-    public Dictionary<string, decimal> RecordedPackagePayments { get; set; } = [];
+    public decimal RecordedPackagePayments { get; set; }
     public List<Appointment> Appointments { get; set; } = [];
 }
 public class HomeVM

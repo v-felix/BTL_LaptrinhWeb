@@ -1,6 +1,5 @@
 using System.Globalization;
 using System.Text.Json;
-using System.Text.RegularExpressions;
 using HospitalManagement.Web.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -51,10 +50,10 @@ public static class DbInitializer
             foreach (var row in root.GetProperty("health_checks").EnumerateArray())
             {
                 var features = JsonSerializer.Deserialize<string[]>(S(row, "features")) ?? [];
-                db.HealthChecks.Add(new HealthCheck { Name = S(row, "name"), Price = Price(S(row, "price")), CurrencyCode = "BDT", Features = string.Join('\n', features), Popular = S(row, "popular") == "1" });
+                db.HealthChecks.Add(new HealthCheck { Name = S(row, "name"), Price = Price(S(row, "price")), CurrencyCode = "VND", Features = string.Join('\n', features), Popular = S(row, "popular") == "1" });
             }
             foreach (var row in root.GetProperty("diagnostic_services").EnumerateArray())
-                db.DiagnosticServices.Add(new DiagnosticService { Name = S(row, "name"), Category = S(row, "category"), Description = S(row, "description"), SampleType = S(row, "sample_type"), Price = Price(S(row, "price")), CurrencyCode = "BDT", Duration = int.Parse(S(row, "duration")), ReportHours = int.Parse(S(row, "report_time")), HomeCollectionAvailable = S(row, "home_collection_available") == "1" });
+                db.DiagnosticServices.Add(new DiagnosticService { Name = S(row, "name"), Category = S(row, "category"), Description = S(row, "description"), SampleType = S(row, "sample_type"), Price = Price(S(row, "price")), CurrencyCode = "VND", Duration = int.Parse(S(row, "duration")), ReportHours = int.Parse(S(row, "report_time")), HomeCollectionAvailable = S(row, "home_collection_available") == "1" });
             foreach (var row in root.GetProperty("news").EnumerateArray())
                 db.News.Add(new News { Title = S(row, "title"), Excerpt = S(row, "excerpt"), Content = S(row, "content"), Category = S(row, "category"), PublishedDate = DateOnly.Parse(S(row, "date"), CultureInfo.InvariantCulture) });
             await db.SaveChangesAsync();
@@ -77,7 +76,7 @@ public static class DbInitializer
         Check(await users.AddToRoleAsync(user, role));
     }
     private static string S(JsonElement element, string name) => element.TryGetProperty(name, out var value) && value.ValueKind != JsonValueKind.Null ? value.ToString() : "";
-    private static decimal Price(string raw) => decimal.Parse(Regex.Replace(raw, "[^0-9.]", ""), CultureInfo.InvariantCulture);
+    private static decimal Price(string raw) => decimal.Parse(raw, CultureInfo.InvariantCulture);
     public static void Check(IdentityResult result)
     {
         if (!result.Succeeded) throw new InvalidOperationException(string.Join("; ", result.Errors.Select(e => e.Description)));

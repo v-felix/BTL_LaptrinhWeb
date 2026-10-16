@@ -120,7 +120,7 @@ Khi thay đổi ca làm việc, cần kiểm tra các lịch đã đặt để �
 | Đã hủy / Cancelled | Phiếu không tiếp tục được thực hiện. |
 
 - Lịch và giờ hẹn sử dụng giờ Việt Nam. Ngày đặt được giới hạn tối đa 90 ngày tính từ hiện tại.
-- Giá và đơn vị tiền hiển thị trên từng phiếu là căn cứ đối chiếu. Danh mục mẫu có cả **VND** và **BDT**; kiểm tra đơn vị trước khi đăng ký hoặc thu tiền.
+- Mọi khoản phí và số tiền thanh toán sử dụng **Việt Nam đồng (VND)**. Bảng giá có sẵn là dữ liệu minh họa cho đồ án; kiểm tra giá trên phiếu trước khi đăng ký hoặc thu tiền.
 - Thanh toán được nhân viên ghi nhận tại bệnh viện. Nếu hủy phiếu sau khi đã thu tiền, liên hệ bộ phận tiếp nhận để xử lý hoàn tiền.
 - Nếu hệ thống báo phiếu đã thay đổi, tải lại trang để xem thông tin mới nhất trước khi thao tác tiếp.
 - Nếu quên mật khẩu, chọn **Quên mật khẩu** tại trang đăng nhập. Nếu không nhận được liên kết đặt lại, liên hệ người quản trị hệ thống.

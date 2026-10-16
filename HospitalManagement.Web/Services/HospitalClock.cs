@@ -11,7 +11,7 @@ public static class HospitalClock
 
 public static class Display
 {
-    public static string Money(decimal value, string currency = "VND") => value.ToString("N0", CultureInfo.GetCultureInfo("vi-VN")) + (currency == "BDT" ? " BDT" : " ₫");
+    public static string Money(decimal value) => value.ToString("N0", CultureInfo.GetCultureInfo("vi-VN")) + " ₫";
     public static string Day(int value) => value == 0 ? "Chủ nhật" : "Thứ " + (value + 1);
     public static string Status(BookingStatus value) => value switch
     {

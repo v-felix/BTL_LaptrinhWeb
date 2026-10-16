@@ -6,8 +6,8 @@ public class HealthCheck
 {
     public int Id { get; set; }
     [Required, StringLength(200), Display(Name = "Tên gói khám")] public string Name { get; set; } = "";
-    [Range(0, 100000000), Display(Name = "Giá")] public decimal Price { get; set; }
-    [Required, StringLength(3), AllowedValues("VND", "BDT"), Display(Name = "Đơn vị tiền")] public string CurrencyCode { get; set; } = "VND";
+    [Range(0, 100000000), Display(Name = "Giá (VND)")] public decimal Price { get; set; }
+    [Required, StringLength(3), AllowedValues("VND", ErrorMessage = "Hệ thống chỉ sử dụng Việt Nam đồng (VND)."), Display(Name = "Đơn vị tiền")] public string CurrencyCode { get; set; } = "VND";
     [Required, StringLength(4000), Display(Name = "Quyền lợi (mỗi dòng một mục)")] public string Features { get; set; } = "";
     [Display(Name = "Gói nổi bật")] public bool Popular { get; set; }
     [Display(Name = "Đang cung cấp")] public bool IsActive { get; set; } = true;

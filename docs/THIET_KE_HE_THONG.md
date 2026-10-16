@@ -80,7 +80,7 @@ Kiểm tra quyền được thực hiện tại máy chủ cho cả xem và ghi 
 - **Hồ sơ:** đơn thuốc được lưu cùng thao tác hoàn tất khám. Tệp kết quả phải là PDF hợp lệ, tối đa 5 MB, lưu ngoài thư mục công khai và tải qua kiểm tra quyền.
 - **Thu tiền:** phiếu gói khám khởi tạo số tiền đã thu bằng 0; nhân viên cập nhật theo thực thu. Chọn mức cọc không tự ghi nhận thanh toán. Hủy phiếu không tự ghi nhận đã hoàn tiền.
 - **Dữ liệu liên quan:** không xóa dây chuyền các hồ sơ nghiệp vụ; tài khoản hoặc bác sĩ đã có hồ sơ có thể cần khóa thay vì xóa.
-- **Thời gian và tiền tệ:** lịch sử dụng UTC+7. Phiếu lưu đơn vị tiền riêng; thống kê tiền được nhóm theo đơn vị, không cộng các loại tiền khác nhau.
+- **Thời gian và tiền tệ:** lịch sử dụng UTC+7. Toàn bộ danh mục, phiếu và thống kê sử dụng VND. Validation và ràng buộc SQL Server ngăn lưu đơn vị tiền khác. Bảng giá mẫu phục vụ minh họa đồ án.
 
 ## Tài liệu liên quan
 
